@@ -1,0 +1,55 @@
+﻿#background-image {
+    background-image: url(../img/background.svg);
+}
+
+.building1-wrapper {
+
+    margin-top: 20px;
+    height: 500px;
+    background-image: linear-gradient(to right, red, orange, purple);
+    display: flex;
+    align-items: flex-end;
+}
+.building1 {
+   
+    height: 450px;
+    width:50px;
+    display: flex;
+    align-items: flex-end;
+}
+.building1img {
+    height: 10%;
+    width: 50px;
+}
+.building2img {
+    height: 10%;
+    width: 50px;
+    bottom:45px;
+}
+#concret-image {
+    height: 100%;
+    width: 50%
+}
+.concret {
+    height: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+.road {
+    height: 20px;
+    background-color:black;
+    display: flex;
+    align-items: flex-end;
+}
+.yellowLine {
+    height: 2px;
+    background-color: yellow;
+    display: flex;
+    align-items: flex-end;
+}
+.blackLine {
+    height: 2px;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+}
