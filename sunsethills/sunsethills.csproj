@@ -68,7 +68,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\background.png" />
+    <Content Include="img\building3\building3bottom.png" />
+    <Content Include="img\building3\building3mid.png" />
+    <Content Include="img\building3\building3top.png" />
+    <Content Include="img\building4\building4bottom.png" />
+    <Content Include="img\building4\building4mid.png" />
+    <Content Include="img\building4\building4top.png" />
+    <Content Include="img\building5\buildin5bottom.png" />
+    <Content Include="img\building5\building5mid.png" />
+    <Content Include="img\cars\blackcar.png" />
+    <Content Include="img\cars\redcar.png" />
+    <Content Include="img\cars\redtruck.png" />
+    <Content Include="script\solve.js" />
     <Content Include="style\bootstrap.css" />
+    <Content Include="style\caranimation.css" />
     <Content Include="style\prism.css" />
     <Content Include="style\style.css" />
     <Content Include="html\Code.html" />
