@@ -16,7 +16,7 @@ function buildingArrayMaker() {
 function buildingGenerator(buildingName, height) {
     let bottomBuilding = Math.floor(Math.random() * 3) + 1;
     let topBuilding = Math.floor(Math.random() * 3) + 1;
-    $('.building-wrapper').append(`<div id="${buildingName}" class="building justify-content-center" style="background-color:blue"><div>`);
+    $('.building-wrapper').append(`<div id="${buildingName}" class="building justify-content-center" ><div>`);
 
     if (topBuilding === 1) {
         $(`#${buildingName}`).append(`<img id="${buildingName}top" class="buildingtop" src="../img/building1/building1top.png" style="display:inline-block" />`);
