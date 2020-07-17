@@ -79,8 +79,10 @@
     <Content Include="img\cars\blackcar.png" />
     <Content Include="img\cars\redcar.png" />
     <Content Include="img\cars\redtruck.png" />
+    <Content Include="script\button.js" />
     <Content Include="script\solve.js" />
     <Content Include="style\bootstrap.css" />
+    <Content Include="style\button.css" />
     <Content Include="style\caranimation.css" />
     <Content Include="style\prism.css" />
     <Content Include="style\style.css" />

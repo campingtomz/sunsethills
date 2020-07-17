@@ -12,7 +12,7 @@
 }
 .building {
    
-    height: 90px;
+    height: 130px;
     width:50px;
     margin-left:50px;
     /*display: flex;
@@ -42,7 +42,7 @@
 }
 
 /*building animation*/
-.building1mid {
+.buildingmid {
     animation: fadeIn ease 2s;
 }
 @keyframes fadeIn {

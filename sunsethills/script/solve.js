@@ -1,5 +1,10 @@
 ﻿$(document).ready(buildingArrayMaker);
 let buildingArray = [];
+
+    
+$('.cta').on('click', () => {
+    console.log("test");
+});
 function buildingArrayMaker() {
     for (let i = 0; i < 8; i++) {
         let buildingName = "building" + i;
@@ -16,7 +21,26 @@ function buildingArrayMaker() {
 function buildingGenerator(buildingName, height) {
     let bottomBuilding = Math.floor(Math.random() * 3) + 1;
     let topBuilding = Math.floor(Math.random() * 3) + 1;
-    $('.building-wrapper').append(`<div id="${buildingName}" class="building justify-content-center" ><div>`);
+    $('.building-wrapper').append(`<div id="${buildingName}" class="building justify-content-center"><div>`);
+    $(`#${buildingName}`).append(`
+        <div class="center-con">
+            <div class="round" style="transform:rotate(270deg)">
+                <div  class="cta buttonUp">
+                    <span class="arrow primera next "></span>
+                    <span class="arrow segunda next "></span>
+                </div>
+            </div>
+        </div>`);
+
+    $(`#${buildingName}`).append(`
+        <div class="center-con">
+                <div class="round">
+                    <div  class="cta buttonDown">
+                        <span class="arrow primera next "></span>
+                        <span class="arrow segunda next "></span>
+                    </div>
+                </div>
+            </div>`);
 
     if (topBuilding === 1) {
         $(`#${buildingName}`).append(`<img id="${buildingName}top" class="buildingtop" src="../img/building1/building1top.png" style="display:inline-block" />`);
@@ -48,13 +72,13 @@ function floorMaker(building,height) {
             $(`#${building}`).height(h1 + 30);
             let midBuilding = Math.floor(Math.random() * 3) + 1;
             if (midBuilding === 1) {
-                $(`#${building}bottom`).after((`<img id="${building}mid" class="buildingmid" src="../img/building1/building1mid.png" style="display: inline - block" />`));
+                $(`#${building}top`).after((`<img id="${building}${i}mid" class="buildingmid" src="../img/building1/building1mid.png" style="display: inline - block" />`));
             }
             else if (midBuilding === 2) {
-                $(`#${building}bottom`).after((`<img id="${building}mid" class="buildingmid" src="../img/building3/building3mid.png" style="display: inline - block" />`));
+                $(`#${building}top`).after((`<img id="${building}${i}mid" class="buildingmid" src="../img/building3/building3mid.png" style="display: inline - block" />`));
             }
             else if (midBuilding === 3) {
-                $(`#${building}bottom`).after((`<img id="${building}mid" class="buildingmid" src="../img/building4/building4mid.png" style="display: inline - block" />`));
+                $(`#${building}top`).after((`<img id="${building}${i}mid" class="buildingmid" src="../img/building4/building4mid.png" style="display: inline - block" />`));
             }
         }, 200 * i);
     }
