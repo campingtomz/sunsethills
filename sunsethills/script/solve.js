@@ -2,9 +2,21 @@
 let buildingArray = [];
 
     
-$('.cta').on('click', () => {
-    console.log("test");
+$(".building-wrapper").on('click', '.buttonUp', function() {
+    floorMaker(this.parentElement.id, 1);
 });
+
+$(".building-wrapper").on('click', '.buttonDown', function () {
+    removeFloor(this.parentElement.id);
+});
+
+function removeFloor(buildingName) {
+    let h1 = $(`#${buildingName}`).height();
+    if (h1 > 130 ) {
+        $(`#${buildingName}top`).next().remove();
+        $(`#${buildingName}`).height(h1 - 30);
+    }
+}
 function buildingArrayMaker() {
     for (let i = 0; i < 8; i++) {
         let buildingName = "building" + i;
@@ -21,11 +33,11 @@ function buildingArrayMaker() {
 function buildingGenerator(buildingName, height) {
     let bottomBuilding = Math.floor(Math.random() * 3) + 1;
     let topBuilding = Math.floor(Math.random() * 3) + 1;
-    $('.building-wrapper').append(`<div id="${buildingName}" class="building justify-content-center"><div>`);
+    $('.building-wrapper').append(`<div  id="${buildingName}" class="building justify-content-center"><div>`);
     $(`#${buildingName}`).append(`
-        <div class="center-con">
+        <div class=" buttonUp center-con">
             <div class="round" style="transform:rotate(270deg)">
-                <div  class="cta buttonUp">
+                <div  class="cta ">
                     <span class="arrow primera next "></span>
                     <span class="arrow segunda next "></span>
                 </div>
@@ -33,9 +45,9 @@ function buildingGenerator(buildingName, height) {
         </div>`);
 
     $(`#${buildingName}`).append(`
-        <div class="center-con">
-                <div class="round">
-                    <div  class="cta buttonDown">
+        <div value="test" class=" buttonDown center-con">
+                <div value="test" class="round">
+                    <div  class="cta ">
                         <span class="arrow primera next "></span>
                         <span class="arrow segunda next "></span>
                     </div>
@@ -72,13 +84,13 @@ function floorMaker(building,height) {
             $(`#${building}`).height(h1 + 30);
             let midBuilding = Math.floor(Math.random() * 3) + 1;
             if (midBuilding === 1) {
-                $(`#${building}top`).after((`<img id="${building}${i}mid" class="buildingmid" src="../img/building1/building1mid.png" style="display: inline - block" />`));
+                $(`#${building}top`).after((`<img id="${building}mid" class="buildingmid" src="../img/building1/building1mid.png" style="display: inline - block" />`));
             }
             else if (midBuilding === 2) {
-                $(`#${building}top`).after((`<img id="${building}${i}mid" class="buildingmid" src="../img/building3/building3mid.png" style="display: inline - block" />`));
+                $(`#${building}top`).after((`<img id="${building}mid" class="buildingmid" src="../img/building3/building3mid.png" style="display: inline - block" />`));
             }
             else if (midBuilding === 3) {
-                $(`#${building}top`).after((`<img id="${building}${i}mid" class="buildingmid" src="../img/building4/building4mid.png" style="display: inline - block" />`));
+                $(`#${building}top`).after((`<img id="${building}mid" class="buildingmid" src="../img/building4/building4mid.png" style="display: inline - block" />`));
             }
         }, 200 * i);
     }

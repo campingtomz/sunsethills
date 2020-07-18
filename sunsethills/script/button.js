@@ -2,4 +2,5 @@
     e.preventDefault();
     e.stopPropagation();
     $('.arrow').toggleClass('bounceAlpha');
+    console.log("test");
 });
