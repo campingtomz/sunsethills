@@ -81,6 +81,7 @@
     <Content Include="img\cars\redtruck.png" />
     <Content Include="img\img-hi.png" />
     <Content Include="img\trees\tree.png" />
+    <Content Include="img\zanis-logo.png" />
     <Content Include="script\button.js" />
     <Content Include="script\solve.js" />
     <Content Include="style\bootstrap.css" />
