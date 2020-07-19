@@ -2,11 +2,27 @@
 let buildingArray = [];
 
     
-$(".building-wrapper").on('click', '.buttonUp', function() {
+$(".building-wrapper").on('click', '.buttonUp', function () {
+    for (item of buildingArray) {
+        if (item.building === this.parentElement.id) {
+            item.height += 1;
+            console.log(item.height);
+        }
+    }
+   
     floorMaker(this.parentElement.id, 1);
 });
 
 $(".building-wrapper").on('click', '.buttonDown', function () {
+    for (item of buildingArray) {
+        if (item.building === this.parentElement.id) {
+            item.height -= 1;
+            console.log(item.height);
+        }
+    }
+
+    floorMaker(this.parentElement.id, 1);
+});
     removeFloor(this.parentElement.id);
 });
 
