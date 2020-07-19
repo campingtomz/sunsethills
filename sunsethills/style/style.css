@@ -2,9 +2,7 @@
 body {
     background-image: linear-gradient(to left, #f3edc9, #cfe4e9);
 }
-html{
-    font-size:62.5%;
-}
+
 .main-container {
     background-color:black;
 }
