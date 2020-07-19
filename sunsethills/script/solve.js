@@ -21,8 +21,8 @@ $(".building-wrapper").on('click', '.buttonDown', function () {
         }
     }
 
-    floorMaker(this.parentElement.id, 1);
-});
+ 
+
     removeFloor(this.parentElement.id);
 });
 
