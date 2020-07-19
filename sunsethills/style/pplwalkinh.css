@@ -1,0 +1,24 @@
+﻿.person {
+    height: 10px;
+    width: 65px;
+    position: relative;
+    animation-name: personwalking;
+    animation-duration: 6s;
+    /*animation-iteration-count: 2;
+    animation-direction: alternate;*/
+}
+
+@keyframes personwalking {
+    0% {
+        left: 105%;
+        top: 0px;
+    }
+
+    100% {
+        left: -100px;
+        top: 0px;
+    }
+
+    120% {
+    }
+}

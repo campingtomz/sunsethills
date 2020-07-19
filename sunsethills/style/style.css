@@ -1,20 +1,37 @@
-﻿#background-image {
-    background-image: url(../img/background.svg);
+﻿
+body {
+    background-image: linear-gradient(to left, #f3edc9, #cfe4e9);
+}
+html{
+    font-size:62.5%;
+}
+.main-container {
+    background-color:black;
+}
+.tree-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
 }
 
-.building-wrapper {
 
+.building-wrapper {
     margin-top: 20px;
     height: 500px;
-    background-image: linear-gradient(to right, red, orange, purple);
+    width: auto;
+    /*    background-image: linear-gradient(to right, red, orange, purple);*/
+    background-image: url(../img/img-hi.png);
+    background-size: 100% 100%;
+    
     display: flex;
     align-items: flex-end;
 }
 .building {
-   
+     z-index: 2;
     height: 130px;
-    width:50px;
-    margin-left:50px;
+    width: 50px;
+    margin-left: 5%;
     /*display: flex;
     align-items: flex-end;*/
 }
@@ -25,6 +42,7 @@
 .buildingmid {
     height: 30px;
     width: 50px;
+
 }
 .buildingbottom {
     height: 45px;
@@ -36,9 +54,11 @@
     width: 50%
 }
 .concret {
-    height: 20px;
+
+    height: auto;
+    width: 100%;
     display: flex;
-    align-items: flex-end;
+    
 }
 
 /*building animation*/
@@ -52,5 +72,18 @@
 
     100% {
         opacity: 1;
+    }
+}
+.glowingBuilding {
+    
+    animation: glow 3s infinite alternate;
+}
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px -10px #F5EE20;
+    }
+
+    to {
+        box-shadow: 0 0 10px 10px #F56826;
     }
 }

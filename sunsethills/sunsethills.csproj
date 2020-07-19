@@ -79,11 +79,14 @@
     <Content Include="img\cars\blackcar.png" />
     <Content Include="img\cars\redcar.png" />
     <Content Include="img\cars\redtruck.png" />
+    <Content Include="img\img-hi.png" />
+    <Content Include="img\trees\tree.png" />
     <Content Include="script\button.js" />
     <Content Include="script\solve.js" />
     <Content Include="style\bootstrap.css" />
     <Content Include="style\button.css" />
     <Content Include="style\caranimation.css" />
+    <Content Include="style\pplwalkinh.css" />
     <Content Include="style\prism.css" />
     <Content Include="style\style.css" />
     <Content Include="html\Code.html" />
@@ -97,11 +100,11 @@
     <Content Include="img\building2\building2top.png" />
     <Content Include="img\lamp-post-svgrepo-com.svg" />
     <Content Include="img\lamppost.png" />
-    <Content Include="img\tree.svg" />
     <Content Include="index.html" />
     <Content Include="script\bootstrap.js" />
     <Content Include="script\jquery-3.5.1.min.js" />
     <Content Include="script\prism.js" />
+    <Content Include="style\textanimation.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,7 +120,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="img\trees\" />
+    <Folder Include="img\pplwalking\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

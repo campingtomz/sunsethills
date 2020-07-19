@@ -1,16 +1,27 @@
 ﻿$(document).ready(buildingArrayMaker);
 let buildingArray = [];
 
-    
+$('.round').click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $('.arrow').toggleClass('bounceAlpha');
+    console.log("test");
+});
 $(".building-wrapper").on('click', '.buttonUp', function () {
+
     for (item of buildingArray) {
         if (item.building === this.parentElement.id) {
-            item.height += 1;
-            console.log(item.height);
+            if (item.height < 13) {
+                item.height += 1;
+            }
+            else {
+                return;
+            }
         }
     }
-   
+    updateOutput();
     floorMaker(this.parentElement.id, 1);
+
 });
 
 $(".building-wrapper").on('click', '.buttonDown', function () {
@@ -20,22 +31,47 @@ $(".building-wrapper").on('click', '.buttonDown', function () {
             console.log(item.height);
         }
     }
-
- 
-
     removeFloor(this.parentElement.id);
+    updateOutput();
 });
+function updateOutput() {
+    let outputArray = [];
+    let maxHeight = 0;
+    for (building of buildingArray) {
+        if (building.height > maxHeight) {
+            outputArray.push(building.building);
+            maxHeight = building.height;
+        }
 
+    }
+    addRemoveGlow(outputArray);
+    outputArrayText(outputArray);
+}
+
+function outputArrayText(outputArray) {
+    let outputString = outputArray.join(', ');
+    $('#outputText').text(`The buildings that can see the SunSet are ${outputString}`);
+}
+function addRemoveGlow(outputArray) {
+    for (item of buildingArray) {
+        console.log(building.building);
+        $(`#${item.building}`).removeClass("glowingBuilding");
+    }
+    for (item of outputArray) {
+        $(`#${item}`).addClass("glowingBuilding");
+    }
+
+}
 function removeFloor(buildingName) {
     let h1 = $(`#${buildingName}`).height();
-    if (h1 > 130 ) {
+    if (h1 > 130) {
         $(`#${buildingName}top`).next().remove();
         $(`#${buildingName}`).height(h1 - 30);
     }
 }
 function buildingArrayMaker() {
-    for (let i = 0; i < 8; i++) {
-        let buildingName = "building" + i;
+    for (let i = 0; i < 10; i++) {
+        let buildingName = "Building_" + i;
         let buildingHeight = Math.floor(Math.random() * 8) + 1;
         let building = {
             building: buildingName,
@@ -43,9 +79,9 @@ function buildingArrayMaker() {
         }
         buildingArray.push(building);
         buildingGenerator(buildingName, buildingHeight);
+        updateOutput();
     }
 }
-
 function buildingGenerator(buildingName, height) {
     let bottomBuilding = Math.floor(Math.random() * 3) + 1;
     let topBuilding = Math.floor(Math.random() * 3) + 1;
@@ -70,6 +106,7 @@ function buildingGenerator(buildingName, height) {
                 </div>
             </div>`);
 
+   
     if (topBuilding === 1) {
         $(`#${buildingName}`).append(`<img id="${buildingName}top" class="buildingtop" src="../img/building1/building1top.png" style="display:inline-block" />`);
     }
@@ -91,8 +128,7 @@ function buildingGenerator(buildingName, height) {
     }
     floorMaker(buildingName, height);
 }
-
-function floorMaker(building,height) {
+function floorMaker(building, height) {
     for (let i = 0; i < height; i++) {
         setTimeout(() => {
             let h1 = $(`#${building}`).height();
@@ -111,3 +147,4 @@ function floorMaker(building,height) {
         }, 200 * i);
     }
 }
+

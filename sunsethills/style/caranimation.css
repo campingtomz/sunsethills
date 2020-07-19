@@ -1,6 +1,6 @@
 ﻿.cars{
-    height:19px;
-    width:25px;
+    height:auto;
+    width:auto;
 }
 
 .road {
@@ -10,8 +10,9 @@
     align-items: flex-end;
 }
 
-.yellowLine {
+    .yellowLine {
     height: 2px;
+    width:auto;
     background-color: yellow;
     display: flex;
     align-items: flex-end;
