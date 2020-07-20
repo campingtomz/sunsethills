@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\47f236eb3089c29278b7877e91afb18c.gif" />
     <Content Include="img\background.png" />
     <Content Include="img\building3\building3bottom.png" />
     <Content Include="img\building3\building3mid.png" />
