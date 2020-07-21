@@ -67,7 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="img\47f236eb3089c29278b7877e91afb18c.gif" />
     <Content Include="img\background.png" />
     <Content Include="img\building3\building3bottom.png" />
     <Content Include="img\building3\building3mid.png" />
@@ -81,6 +80,7 @@
     <Content Include="img\cars\redcar.png" />
     <Content Include="img\cars\redtruck.png" />
     <Content Include="img\img-hi.png" />
+    <Content Include="img\oie_202396m1HYR1vf.gif" />
     <Content Include="img\trees\tree.png" />
     <Content Include="img\zanis-logo.png" />
     <Content Include="script\button.js" />
